@@ -1,6 +1,6 @@
 'use strict';
 
-var selectableWords = // Word list
+var selectableWords = // Words to guess from
     [
         ["neon", "aquanet", "glitter", "supercool", "flintstones", "gnarly", "radical"]
     ];
@@ -14,10 +14,7 @@ var remainingGuesses = 0; // How many tries the player has left
 var hasFinished = false; // Flag for 'press any key to try again'     
 var wins = 0; // How many wins has the player racked up
 
-// Game sounds
-var keySound = new Audio('./assets/sounds/typewriter-key.wav');
-var winSound = new Audio('./assets/sounds/you-win.wav');
-var loseSound = new Audio('./assets/sounds/you-lose.wav');
+
 
 // Reset our game-level variables
 function resetGame() {
