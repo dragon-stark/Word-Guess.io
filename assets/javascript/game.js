@@ -1,9 +1,5 @@
-'use strict';
+// 'use strict';
 
-var selectableWords = // Words to guess from
-    [
-        ["neon", "aquanet", "glitter", "supercool", "flintstones", "gnarly", "radical"]
-    ];
 
 const maxTries = 10; // Maximum number of tries player has
 
@@ -14,9 +10,11 @@ var remainingGuesses = 0; // How many tries the player has left
 var hasFinished = false; // Flag for 'press any key to try again'     
 var wins = 0; // How many wins has the player racked up
 
+var selectableWords = [
+    ["neon", "aquanet", "glitter", "supercool", "flintstones", "gnarly", "radical"]
+];
 
-
-// Reset our game-level variables
+// Reset game-level variables
 function resetGame() {
     remainingGuesses = maxTries;
 
@@ -27,8 +25,8 @@ function resetGame() {
     guessedLetters = [];
     guessingWord = [];
 
-    // Make sure the hangman image is cleared
-    document.getElementById("hangmanImage").src = "";
+    // // Make sure the hangman image is cleared
+    // document.getElementById("hangmanImage").src = "";
 
     // Build the guessing word and clear it out
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
@@ -64,9 +62,9 @@ function updateDisplay() {
 
 
 // Updates the image depending on how many guesses
-function updateHangmanImage() {
-    document.getElementById("hangmanImage").src = "assets/images/" + (maxTries - remainingGuesses) + ".png";
-};
+// function updateHangmanImage() {
+//     document.getElementById("hangmanImage").src = "assets/images/" + (maxTries - remainingGuesses) + ".png";
+// };
 
 // This function takes a letter and finds all instances of 
 // appearance in the string and replaces them in the guess word.
@@ -98,8 +96,7 @@ function checkWin() {
         document.getElementById("youwin-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display: block";
         wins++;
-        winSound.play();
-        hasFinished = true;
+
     }
 };
 
@@ -107,7 +104,6 @@ function checkWin() {
 // Checks for a loss
 function checkLoss() {
     if (remainingGuesses <= 0) {
-        loseSound.play();
         document.getElementById("gameover-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
         hasFinished = true;
@@ -125,7 +121,6 @@ function makeGuess(letter) {
     }
 
 };
-
 
 // Event listener
 document.onkeydown = function (event) {
