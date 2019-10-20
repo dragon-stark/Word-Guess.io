@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- <img src="assets/images/darkness.png"> -->
+
     <div class="container">
 
         <div class="row">
@@ -26,8 +26,7 @@
                 <br>
                 <img id="youwin-image" src="assets/images/you-win.png" alt="Winning Image" />
                 <img id="gameover-image" src="assets/images/gameover.png" alt="Game Over Image" />
-                <h2 id="pressKeyTryAgain">Press Any Key to Try Again!</h2>
-                <!-- <img id="hangmanImage" src="" alt="" /> -->
+           
                 <h1>Do you even 80's?</h1>
                 <br>
                 <h2>Prove it!</h2>
@@ -44,15 +43,13 @@
                 <h6 id="remainingGuesses"></h6>
                 <h4>Letters Guessed</h4>
                 <h3 id="guessedLetters"></h3>
-                <!-- <p id="score"></p>
-                <p id="question"></p> -->
             </div>
         </div>
     </div>
 
     <script>
         resetGame();
-        updateDisplay();
+        // updateDisplay();
     </script>
 
 </body>
@@ -60,38 +57,5 @@
 </html>
 
 
-<!-- // var confirmNo = confirmNo("ugh whatever");
-// var words = ["neon", "aquanet", "glitter", "supercool", "flintstones", "gnarly", "radical"]
-// var arrayLength = words.length;
 
 
-
-
-// VARIABLES
-// ==========================================================================
-
-
-// We start the game with a score of 0.
-var score = 0;
-// Variable to hold the index of current question.
-var questionIndex = 0;
-
-// FUNCTIONS
-// ==============================================================================
-
-// Function to render questions.
-function renderQuestion() {
-// If there are still more questions, render the next one.
-if (questionIndex <= (questions.length - 1)) { document.querySelector("#question").innerHTML=questions[questionIndex].q;
-    } // If there aren't, render the game over screen else { document.querySelector("#question").innerHTML="Game Over!"
-    ; document.querySelector("#score").innerHTML="Final Score: " + score + " out of " + questions .length; }
-    } //Function that updates score function updateScore() { document.querySelector("#score").innerHTML="Score: " +
-    score; } // MAIN PROCESS //============================================================================== //
-    Callingfunctions to start the game. renderQuestion(); updateScore(); // When the user presses a key, it will run the
-    following function document.onkeyup=function (event) { // If there are no more questions, stop the function if
-    (questionIndex===questions.length) { return; } // Determine which key was pressed, make it lowercase, and set it to
-    the userInput variable var userInput=event.key.toLowerCase(); // Only run this codeif "t" or "f" were pressed. if
-    (userInput==="t" || userInput==="f" ) { // If they guess the correct answer, increase and update score, alert them
-    they got it right. if (userInput===questions[questionIndex].a) { alert("Correct!"); score++; updateScore(); } // If
-    wrong, alert them they are wrong. else { alert("Wrong!"); } // Increment the questionIndex variable and call the
-    renderQuestion function. questionIndex++; renderQuestion(); } }; </script> -->
