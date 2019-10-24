@@ -1,10 +1,4 @@
-// const maxTries = 10; // Maximum number of tries player has
-var guessedLetters = []; // Stores the letters the user guessed
-var wordToMatch; // Index of the current word in the array
-var guessingWord = []; // This will be the word we actually build to match the current word
-var hasFinished = false; // Flag for 'press any key to try again'
-var wins = 0; // How many wins
-var selectableWords = [
+var wordList = [
 	"neon",
 	"aquanet",
 	"glitter",
@@ -13,117 +7,99 @@ var selectableWords = [
 	"gnarly",
 	"radical"
 ];
-// Reset game-level variables
-function resetGame() {
+var blanksToFill = ""; // Index of the current word in the array
+var guessedLetters = []; // Stores the letters the user guessed
+var wrongGuesses = [];
+var blanksToFill = 0;
+var filledInLetters = [];
+var guessedWrong = [];
+var lettersGuessed = "";
+
+var wins = 0; // How many wins
+var losses = 0; // how many losses
+var maxGuesses = 10; // Maximum number of tries player has
+
+function game() {
+	// resetGame();
+	maxGuesses = 10;
+	//how the word is selected at random
+	blanksToFill = wordList[Math.floor(Math.random() * wordList.length)];
+	blanksToFill = filledInLetters.length;
+
+	console.log(blanksToFill);
+
+	filledInLetters = [];
+
+	//
+
+	guessedWrong = [];
+
+	// document.onkeyup = function(event) {
+	// 	console.log(event.key);
+	// 	var blanksToFill = wordList[0];
+	// 	guessedLetters.push(event.key);
+	//
+	for (var i = 0; i < blanksToFill; i++) {
+		//
+		filledInLetters.push("_ ");
+	}
+	//
+	correctGuesses.push(event.key);
+	//
+
 	// remainingGuesses = maxTries;
 
 	// Use Math.floor to round the random number down to the nearest whole.
-	wordToMatch =
-		selectableWords[Math.floor(Math.random() * selectableWords.length)];
-	console.log(wordToMatch);
-	for (var i = 0; i < wordToMatch.length; i++) {
-		if (wordToMatch[i] === " ") {
-			guessingWord.push(" ");
-		}
-	}
+
+	console.log(blanksToFill);
+	// for (var i = 0; i < blanksToFill.length; i++) {
+	// 	if (blanksToFill[i] === " ") {
+	// 		guessingWord.push(" ");
+	// 	}
+	// }
 
 	// Clear out arrays
 	guessedLetters = [];
 	guessingWord = [];
 
 	// Build the guessing word and clear it out
-	for (var i = 0; i < wordToMatch.length; i++) {
-		guessingWord.push("_");
-	}
-	// Hide game over and win images/text
-	// document.getElementById("pressKeyTryAgain").style.cssText = "display: none";
-	// document.getElementById("gameover-image").style.cssText = "display: none";
-	// document.getElementById("youwin-image").style.cssText = "display: none";
+	// for (var i = 0; i < blanksToFill.length; i++) {
+	// 	guessingWord.push("_");
+	// }
 
-	// Show display
-	updateDisplay();
+	// // Show display
+	// updateDisplay();
 
 	//  Updates the display on the HTML Page
-	function updateDisplay() {
-		document.getElementById("totalWins").innerText = wins;
 
-		// Display how much of the word we've already guessed on screen.
-		var guessingWordText = "";
-		for (var i = 0; i < guessingWord.length; i++) {
-			guessingWordText += guessingWord[i];
-		}
-		document.getElementById("currentWord").innerText = guessingWordText;
-		// document.getElementById("remainingGuesses").innerText = remainingGuesses;
-		document.getElementById("guessedLetters").innerText = guessedLetters;
-	}
+	// Display how much of the word we've already guessed on screen.
+	// var guessingWordText = "";
+	// for (var i = 0; i < guessingWord.length; i++) {
+	// 	guessingWordText += guessingWord[i];
+	// }
+
 	// takes a letter and finds all instances of
 	// appearance in the string and replaces them in the guess word.
-	function evaluateGuess(letter) {
+	function checkGuess(letter) {
 		// Array to store positions of letters in string
-		var positions = [];
+		var letterFound = false;
+
+	
 
 		// Loop through word finding all instances of guessed letter, store the indicies in an array.
-		for (var i = 0; i < wordToMatch.length; i++) {
-			if (wordToMatch[i] === letter) {
+		for (var i = 0; i < blanksToFill.length; i++) {
+			if (blanksToFill[i] === letter) {
 				positions.push(i);
 			}
 		}
 		if (positions.length <= 0) {
 			remainingGuesses--;
-		} else {
 			// Loop through all the indicies and replace the '_' with a letter.
 			for (var i = 0; i < positions.length; i++) {
 				guessingWord[positions[i]] = letter;
 				// 	}
-			}
+				if ()}
 		}
-		// Checks for a win by seeing if there are any remaining underscores in the guessingword we are building.
-		function checkWin() {
-			if (guessingWord.indexOf("_") === -1) {
-				document.getElementById("youwin-image").style.cssText =
-					"display: block";
-				document.getElementById("pressKeyTryAgain").style.cssText =
-					"display: block";
-				wins++;
-			}
-		}
-
-		// Checks for a loss
-		function checkLoss() {
-			if (remainingGuesses <= 0) {
-				document.getElementById("gameover-image").style.cssText =
-					"display: block";
-				document.getElementById("pressKeyTryAgain").style.cssText =
-					"display:block";
-				hasFinished = true;
-			}
-		}
-
-		// Makes a guess
-		function makeGuess(letter) {
-			if (remainingGuesses > 0) {
-				// Make sure we didn't use this letter yet
-				if (guessedLetters.indexOf(letter) === -1) {
-					guessedLetters.push(letter);
-					evaluateGuess(letter);
-				}
-			}
-		}
-		// Event listener
-		document.onkeydown = function(event) {
-			// If we finished a game, dump one keystroke and reset.
-			if (hasFinished) {
-				resetGame();
-				hasFinished = false;
-			} else {
-				// Check to make sure a-z was pressed.
-				if (event.keyCode >= 65 && event.keyCode <= 90) {
-					makeGuess(event.key.toUpperCase());
-					updateDisplay();
-					checkWin();
-					checkLoss();
-				}
-			}
-		};
 	}
+	// Checks for a win by seeing if there are any remaining underscores in the guessingword we are building
 }
