@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Word Guess Game</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
-</head>
-
-<body>
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-md-6 gameplay-column">
-                <br>
-                <img id="youwin-image" src="assets/images/you-win.png" alt="Winning Image" />
-                <img id="gameover-image" src="assets/images/gameover.png" alt="Game Over Image" />
-           
-                <h1>Do you even 80's?</h1>
-                <br>
-                <h2>Prove it!</h2>
-                </h2>
-            </div>
-            <br>
-            <div class="col-md-6 game play-column">
-                <h2>Press any any key to get started!</h2>
-                <h4>Wins</h4>
-                <h5 id="totalWins"></h5>
-                <h4>Current Word</h4>
-                <h3 id="currentWord"></h3>
-                <h4>Guesses Remaining</h4>
-                <h6 id="remainingGuesses"></h6>
-                <h4>Letters Guessed</h4>
-                <h3 id="guessedLetters"></h3>
-            </div>
-        </div>
-    </div>
-
-    <script>
-  
-    </script>
-<script src="assets/javascript/game.js" type="text/javascript"></script>
-
-</body>
-
+		<title>Word Guess Game</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/80's Style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Do you even 80's?</h1>
+			<br />
+		</div>
+		<div id="container">
+			<div
+				id="youwin-image"
+				src="assets/images/you-win.png"
+				alt="Winning Image"
+			></div>
+			<div
+				id="gameover-image"
+				src="assets/images/gameover.png"
+				alt="Game Over Image"
+			></div>
+			<div id="game-section">
+				<h2>Press any any key to get started!</h2>
+				<div>
+					<h3 class="section-title">Wins</h3>
+					<!-- this is where wins will show up -->
+					<div id="wins"></div>
+				</div>
+				<div id="current-word-section">
+					<h3 class="section-title">Current Word</h3>
+					<div id="curren-word"></div>
+				</div>
+				<div id="guesses-remaining-section">
+					<h3 class="section-title">Number of Guesses Remaining</h3>
+					<!-- The div where our remaining guesses will be shown. -->
+					<div id="guesses-remaining"></div>
+				</div>
+				<div id="guessed-letters-section">
+					<h3 class="section-title">Letters Already Guessed</h3>
+					<!-- The div where our guesses letters will be shown. -->
+					<div id="guessed-letters"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Link to javascript file -->
+		<script src="assets/javascript/game.js" type="text/javascript"></script>
+	</body>
 </html>
-
-
-
-
