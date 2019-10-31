@@ -1,13 +1,13 @@
-@import url("http://fonts.googleapis.com/css?family=Mr+Dafoe");
+/* @import url("http://fonts.googleapis.com/css?family=Mr+Dafoe");
 @import url("http://fonts.googleapis.com/css?family=Titillium+Web:900");
 @import url("http://fonts.googleapis.com/css?family=Righteous");
 @import url("http://fonts.googleapis.com/css?family=Candal");
 @import url("http://fonts.googleapis.com/css?family=Permanent+Marker");
-@import url("http://fonts.googleapis.com/css?family=Monoton");
+@import url("http://fonts.googleapis.com/css?family=Monoton"); */
 
 body {
 	position: relative;
-	color: #f008b7;
+	color: #a90cf1;
 	background: url("../images/darkness.png");
 }
 
@@ -37,7 +37,7 @@ h1 {
 		#ec9b4e 100%
 	);
 	background-clip: text;
-	/* -webkit-text-fill-color: transparent; */
+	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 4px #f5f5f5;
 }
 
