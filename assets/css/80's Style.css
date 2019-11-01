@@ -7,38 +7,38 @@
 
 body {
 	position: relative;
-	color: #a90cf1;
+	color: #d9e5f5;
 	background: url("../images/darkness.png");
 }
 
 * {
 	font-family: "Permanent Marker", cursive;
-	font-size: 25px;
-	letter-spacing: 3px;
+	font-size: 30px;
+	letter-spacing: 4px;
 }
-h1 {
+/* h1 {
 	position: relative;
 	font-size: 50px;
-}
+} */
 .chrome {
 	position: relative;
 	margin: 0;
 	font-family: "Titillium Web", sans-serif;
-	font-size: 200px;
+	font-size: 150px;
 	font-style: italic;
 	line-height: 1;
-	background-image: linear-gradient(
-		#378dbc 0%,
-		#b6e8f1 46%,
-		#fff 50%,
+	background-image: repeating-linear-gradient(
+		#07a1f5 0%,
+		#9218f5 46%,
+		rgb(245, 241, 37) 50%,
 		#eaec41 54%,
-		#ffc488 58%,
+		#6bf18d 58%,
 		#f18440 90%,
-		#ec9b4e 100%
+		#f139f1 100%
 	);
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 4px #f5f5f5;
+	-webkit-text-stroke: 7px #fdddf4;
 }
 
 .chrome::before {
@@ -52,7 +52,7 @@ h1 {
 		-40deg,
 		transparent 0%,
 		transparent 20%,
-		#fff 50%,
+		#fff 25%,
 		transparent 10%,
 		transparent 10%
 	);
@@ -63,6 +63,7 @@ h1 {
 	animation-timing-function: linear;
 	animation-delay: 2s;
 	animation-iteration-count: infinite;
+	filter: drop-shadow(3px 3px 25px #3208f0);
 	-webkit-text-stroke: 0;
 }
 
@@ -81,5 +82,5 @@ h1 {
 }
 
 .windows .dreams {
-	-webkit-text-stroke: 4px #f008b7;
+	-webkit-text-stroke: 4px #9b75f5;
 }

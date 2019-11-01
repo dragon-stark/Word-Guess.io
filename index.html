@@ -11,38 +11,29 @@
 		<link rel="stylesheet" href="assets/css/80's Style.css" />
 	</head>
 	<body>
-		<div class="wrapper">
-			<h1>Do you even 80's?</h1>
-			<br />
+		<div id="wrapper">
+			<h1 class="chrome">Do you even 80's?</h1>
 		</div>
 		<div id="container">
-			<div
-				id="youwin-image"
-				src="assets/images/you-win.png"
-				alt="Winning Image"
-			></div>
-			<div
-				id="gameover-image"
-				src="assets/images/gameover.png"
-				alt="Game Over Image"
-			></div>
-<div class="row">
-	<div class="col-md-6">
+			<h2 id="music"></h2>
+			<!-- The div where our image will be shown. -->
 			<div id="band-div">
-				<img src="assets/images/rainbow-brite-80s-8eng92v.gif" width="300"
-				height="300 alt="word guess 80's themed" />
+				<img
+					src="assets/images/rainbow-brite-80s-8eng92v.gif"
+					alt="80's game image"
+				/>
 			</div>
 			<div id="game-section">
-				<div class="col-md-6">
-				<h2>Press any any key to get started!</h2>
+				<p>Press any key to get started!</p>
 				<div>
 					<h3 class="section-title">Wins</h3>
-					<!-- this is where wins will show up -->
+					<!-- The div where our wins will be shown. -->
 					<div id="wins"></div>
 				</div>
 				<div id="current-word-section">
 					<h3 class="section-title">Current Word</h3>
-					<div id="curren-word"></div>
+					<!-- The div where our current word (and guessing progress) will be shown. -->
+					<div id="current-word"></div>
 				</div>
 				<div id="guesses-remaining-section">
 					<h3 class="section-title">Number of Guesses Remaining</h3>
@@ -55,7 +46,7 @@
 					<div id="guessed-letters"></div>
 				</div>
 			</div>
-		</div></div>
+		</div>
 		<!-- Link to javascript file -->
 		<script src="assets/javascript/game.js" type="text/javascript"></script>
 	</body>

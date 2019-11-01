@@ -1,28 +1,5 @@
-var wordGuesGame = {
-
-	wordsToPick: {
-		neon: {
-			picture: "https://i.pinimg.com/originals/78/59/2c/78592c54969410b63819ba68943a5467.jpg"
-		},
-		aquanet: {
-			picture: "https://i.pinimg.com/originals/e0/1d/ca/e01dcad4fce37f51b4fbe073be7fbd50.jpg"
-		},
-		glitter: {
-			picture: "https://bitzngiggles.com/wp-content/uploads/2015/11/Water-glitter-bracelets-2-post.jpg"
-		},
-		supercool: {
-			picture: "http://eightieskids.com/wp-content/uploads/2016/04/x.jpg "
-		},
-		flintstones: {
-			pictue: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRX1g7NVGwmcNeyjQFB1cak6Ms9VM4U3BUHv6WtFw3swTb4dhbp"
-		},
-		gnarly: {
-			picture: "https://res.cloudinary.com/teepublic/image/private/s--FhWwj3by--/t_Preview/b_rgb:262c3a,c_limit,f_jpg,h_630,q_90,w_630/v1513121002/production/designs/2171324_1.jpg"
-		},
-		radical: {
-			picture: "https://d172h4vc197skd.cloudfront.net/images/26/41/264150edb026fd9341a6e90905b9765f_371188d8c8de_t.png"
-		}
-	},
+// Creating a giant wordGuessGame object that will house all of our logic and variables.
+var wordGuessGame = {
 
 	// Variables that set the initial state of our wordGuess game.
 	wordInPlay: null,
@@ -33,6 +10,32 @@ var wordGuesGame = {
 	totalGuesses: 0,
 	letterGuessed: null,
 	wins: 0,
+
+	// Object of all words that can be chosen, along with info such as their picture.
+
+	wordsToPick: {
+		neon: {
+			picture: "neon.jpg"
+		},
+		aquanet: {
+			picture: "aquanet.jpg"
+		},
+		glitter: {
+			picture: "glitter.jpg"
+		},
+		supercool: {
+			picture: "supercool.jpg"
+		},
+		flintstones: {
+			pictue: "flinstones.jpeg"
+		},
+		gnarly: {
+			picture: "gnarly.jpg"
+		},
+		radical: {
+			picture: "radical.png"
+		}
+	},
 
 	// The setupGame method is called when the page first loads.
 	setupGame: function () {
@@ -184,19 +187,18 @@ var wordGuesGame = {
 			// Update wins on the page.
 			document.querySelector("#wins").innerHTML = this.wins;
 
-			// Update the song title and band on the page.
-			document.querySelector("#music").innerHTML = this.wordsToPick[this.wordInPlay].song +
-				" By " + this.wordInPlay;
+			// // Update the song title and band on the page.
+			// document.querySelector("#music").innerHTML = this.wordsToPick[this.wordInPlay].song +
+			// 	" By " + this.wordInPlay;
 
 			// Update the image of the band on the page.
 			document.querySelector("#bandDiv").innerHTML =
-				"<img class='band-image' src='../images/" +
-				this.wordsToPick[this.wordInPlay].picture + "' alt='" +
-				this.wordsToPick[this.wordInPlay].song + "'>";
+				"<img class ='band-image' src='assets/images/." + "(#band-img)"
+			this.wordsToPick[this.wordInPlay].picture;
 
-			// Play an audio track of the band.
-			var audio = new Audio(this.wordsToPick[this.wordInPlay].preview);
-			audio.play();
+			// // Play an audio track of the band.
+			// var audio = new Audio(this.wordsToPick[this.wordInPlay].preview);
+			// audio.play();
 
 			// return true, which will trigger the restart of our game in the updatePage function.
 			return true;
@@ -216,4 +218,3 @@ document.onkeyup = function (event) {
 	// Pass the guessed letter into our updatePage function to run the game logic.
 	wordGuessGame.updatePage(wordGuessGame.letterGuessed);
 };
-
