@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+	<meta charset="UTF-8" />
 
-		<title>Word Guess Game</title>
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<link rel="stylesheet" href="assets/css/80's Style.css" />
-	</head>
-	<body>
-		<div id="wrapper">
-			<h1 class="chrome">Do you even 80's?</h1>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+	<title>Word Guess Game</title>
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/80's Style.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1 class="chrome">Do you even 80's?</h1>
+	</div>
+	<div id="container">
+		<div class="side">
 		</div>
-		<div id="container">
-			<div class="side">
+		<h2 id="music"></h2>
+		<!-- The div where our image will be shown. -->
+		<div id="band-div">
+			<img src="assets/images/rainbow-brite-80s-8eng92v.gif" height="350px" width="300px" alt="80's game image" />
 		</div>
-			<h2 id="music"></h2>
-			<!-- The div where our image will be shown. -->
-			<div id="band-div">
-				<img
-					src="assets/images/rainbow-brite-80s-8eng92v.gif"
-					alt="80's game image"
-				/>
-			</div >
-			<div id="game-section">
-				<p>Press any key to get started!</p>
-				<div>
-					<h3 class="section-title">Wins</h3>
-					<!-- The div where our wins will be shown. -->
-					<div id="wins"></div>
-				</div>
-				<div id="current-word-section">
-					<h3 class="section-title">Current Word</h3>
-					<!-- The div where our current word (and guessing progress) will be shown. -->
-					<div id="current-word"></div>
-				</div>
-				<div id="guesses-remaining-section">
-					<h3 class="section-title">Number of Guesses Remaining</h3>
-					<!-- The div where our remaining guesses will be shown. -->
-					<div id="guesses-remaining"></div>
-				</div>
-				<div id="guessed-letters-section">
-					<h3 class="section-title">Letters Already Guessed</h3>
-					<!-- The div where our guesses letters will be shown. -->
-					<div id="guessed-letters"></div>
-				</div>
+		<div id="game-section">
+			<p>Press any key to get started!</p>
+			<div>
+				<h3 class="section-title">Wins</h3>
+				<!-- The div where our wins will be shown. -->
+				<div id="wins"></div>
 			</div>
-		</div></div>
-		<!-- Link to javascript file -->
-		<script src="assets/javascript/game.js" type="text/javascript"></script>
-	</body>
+			<div id="current-word-section">
+				<h3 class="section-title">Current Word</h3>
+				<!-- The div where our current word (and guessing progress) will be shown. -->
+				<div id="current-word"></div>
+			</div>
+			<div id="guesses-remaining-section">
+				<h3 class="section-title">Number of Guesses Remaining</h3>
+				<!-- The div where our remaining guesses will be shown. -->
+				<div id="guesses-remaining"></div>
+			</div>
+			<div id="guessed-letters-section">
+				<h3 class="section-title">Letters Already Guessed</h3>
+				<!-- The div where our guesses letters will be shown. -->
+				<div id="guessed-letters"></div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- Link to javascript file -->
+	<script src="assets/javascript/game.js" type="text/javascript"></script>
+</body>
+
 </html>
