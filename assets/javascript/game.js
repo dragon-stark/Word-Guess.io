@@ -1,15 +1,6 @@
 // Creating a giant wordGuessGame object that will house all of our logic and variables.
 var wordGuessGame = {
 
-	// Variables that set the initial state of our wordGuess game.
-	wordInPlay: null,
-	lettersOfTheWord: [],
-	matchedLetters: [],
-	guessedLetters: [],
-	guessesLeft: 0,
-	totalGuesses: 0,
-	letterGuessed: null,
-	wins: 0,
 
 	// Object of all words that can be chosen, along with info such as their picture.
 
@@ -36,6 +27,15 @@ var wordGuessGame = {
 			picture: "radical.png"
 		}
 	},
+	// Variables that set the initial state of our wordGuess game.
+	wordInPlay: null,
+	lettersOfTheWord: [],
+	matchedLetters: [],
+	guessedLetters: [],
+	guessesLeft: 0,
+	totalGuesses: 0,
+	letterGuessed: null,
+	wins: 0,
 
 	// The setupGame method is called when the page first loads.
 	setupGame: function () {
@@ -193,7 +193,7 @@ var wordGuessGame = {
 
 			// Update the image of the band on the page.
 			document.querySelector("#bandDiv").innerHTML =
-				"<img class ='band-image' src='assets/images/." + "(#band-img)"
+				"<img class ='band-image' src='assets/images/" + "(#band-img)"
 			this.wordsToPick[this.wordInPlay].picture;
 
 			// // Play an audio track of the band.
