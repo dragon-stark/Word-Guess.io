@@ -2,7 +2,7 @@
 
 **This game is similar to the widely known game by the name of Hangman.**
 
--Press letter keys to Guess letters until you find the word secretly desplayed on the screen.
+-Press letter keys to Guess letters until you find the word secretly displayed on the screen.
 
 Project Link:
 
