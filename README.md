@@ -8,4 +8,4 @@ Project Link:
 
 [Word Guess!](https://dragon-stark.github.io/Word-Guess.io/)
 
- ![Preview of Game Screen](/images/wordguessshot.jpg)
+ ![Preview of Game Screen](/assets/images/wordguessshot.jpg )
