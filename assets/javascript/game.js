@@ -1,11 +1,16 @@
 // Creating a giant wordGuessGame object that will house all of our logic and variables.
 var wordGuessGame = {
 
-
 	// Object of all words that can be chosen, along with their image.
 
 	wordsToPick: {
+		nintendo: {
+			picture: "neon.jpg"
+		},
 		neon: {
+			picture: "neon.jpg"
+		},
+		tamagotchi: {
 			picture: "neon.jpg"
 		},
 		aquanet: {
@@ -17,13 +22,19 @@ var wordGuessGame = {
 		supercool: {
 			picture: "supercool.jpg"
 		},
-		flintstones: {
-			pictue: "flinstones.jpeg"
+		atari: {
+			picture: "flinstones.jpeg"
 		},
-		gnarly: {
+		pogs: {
 			picture: "gnarly.jpg"
 		},
+		walkman: {
+			picture: "radical.png"
+		},
 		radical: {
+			picture: "radical.png"
+		},
+		vhs: {
 			picture: "radical.png"
 		}
 	},
@@ -93,7 +104,7 @@ updateGuesses: function(letter) {
 	// Update guesses remaining and guesses letters on the page.
 	document.querySelector("#guesses-remaining").innerHTML = this.guessesLeft;
 	document.querySelector("#guessed-letters").innerHTML =
-	this.guessedLetters.join(", ");
+	this.guessedLetters.join(" , ");
   }
 },
 
@@ -128,14 +139,14 @@ rebuildWordView: function() {
   // Loop through the letters of the word we are trying to guess..
   for (var i = 0; i < this.lettersOfTheWord.length; i++) {
 	// If the current letter has been guessed, display that letter.
-	if (this.matchedLetters.indexOf(this.lettersOfTheWord[i]) !== -1) {
-	  wordView += this.lettersOfTheWord[i];
-	}
-	// If it hasn't been guessed, display a "_" instead.
-	else {
-	  wordView += "&nbsp;_&nbsp;";
-	}
-  }
+		if (this.matchedLetters.indexOf(this.lettersOfTheWord[i]) !== -1) {
+			wordView += this.lettersOfTheWord[i];
+		}
+		// If it hasn't been guessed, display a "_" instead.
+		else {
+			wordView += "&nbsp;_&nbsp;"
+		}
+		}
 
   // Update the page with the new string we built.
   document.querySelector("#current-word").innerHTML = wordView;
@@ -190,18 +201,18 @@ updateWins: function() {
 	document.querySelector("#wins").innerHTML = this.wins;
 
 	// Update the song title and band on the page.
-	document.querySelector("#music").innerHTML = this.wordsToPick[this.wordInPlay].song +
-	" By " + this.wordInPlay;
+	// document.querySelector("#music").innerHTML = this.wordsToPick[this.wordInPlay].song +
+	// " By " + this.wordInPlay;
 
 	// Update the image of the band on the page.
-	document.querySelector("#bandDiv").innerHTML =
-	  "<img class='band-image' src='../images/" +
-	  this.wordsToPick[this.wordInPlay].picture + "' alt='" +
-	  this.wordsToPick[this.wordInPlay].song + "'>";
+	// document.querySelector("#bandDiv").innerHTML =
+	//   "<img class='band-image' src='../images/" +
+	//   this.wordsToPick[this.wordInPlay].picture + "' alt='" +
+	//   this.wordsToPick[this.wordInPlay].song + "'>";
 
 	// Play an audio track of the band.
-	var audio = new Audio(this.wordsToPick[this.wordInPlay].preview);
-	audio.play();
+	// var audio = new Audio(this.wordsToPick[this.wordInPlay].preview);
+	// audio.play();
 
 	// return true, which will trigger the restart of our game in the updatePage function.
 	return true;

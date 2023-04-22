@@ -1,50 +1,167 @@
 /* .side {
 	display: inline-block;
 } */
+/* * {
+	align-items: center;
+	Position: relative;
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
+} */
+body {
+	position: relative;
+	color: #d9e5f5;
+	background: url("../images/background.jpg");
+}
+
+* {
+	font-family: sans-serif;
+	/* font-size: 30px; */
+	letter-spacing: 3.5px;
+}
+
+/* h1 {
+	position: relative;
+	font-size: 50px;
+} */
+.chrome {
+	position: relative;
+	margin: 0;
+	font-family: "Titillium Web", sans-serif;
+	font-size: 118px;
+	font-style: italic;
+	line-height: 1.5;
+	background-image: repeating-linear-gradient(
+			#07a1f5 10%,
+			#9218f5 46%,
+			rgb(245, 241, 37) 70%,
+			#eaec41 55%,
+			#6bf18d 44%,
+			#f18440 90%,
+			#f139f1 100%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 7px #fdddf4;
+}
+
+ .chrome::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	padding-right: 400px;
+	content: "CHROME";
+	background-image: linear-gradient(-40deg,
+			transparent 0%,
+			transparent 20%,
+			#fff 5%,
+			transparent 10%,
+			transparent 10%);
+	background-position: -680px 0;
+	background-clip: text;
+	animation-name: chrome_effect;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	filter: drop-shadow(3px 3px 25px #3208f0);
+	-webkit-text-stroke: 0;
+}
+
+.dreams {
+	position: absolute;
+	z-index: 20;
+	margin: 0;
+	margin-top: -70px;
+	margin-left: 455px;
+	font-family: "Mr Dafoe", cursive;
+	font-size: 90px;
+	color: #f975f7;
+	filter: drop-shadow(2px 2px 20px #f008b7);
+	transform: rotate(-10deg);
+	-webkit-text-stroke: 2px #f008b7;
+}
 #container {
-	/* position: absolute; */
+
+	-webkit-text-stroke: 1px #07a1f5;
 	display: inline-block;
-	top: 300px;
-	left: 500px;
+	/* top: 200px;
+	left: 400px; */
+	font-size: 30px;
+		color: #07a1f5;
+		margin: auto;
+		/* filter: brightness(100%); */
+		background-color: rgba(255, 255, 255, 0.06);
+		border: 22px solid #f805c3;
+		/* width: 100%; */
+		border-radius: 15px;
+		backdrop-filter: blur(5px);
+		text-align: center;
+		border-block-color: #f805c3(253, 253, 253, 0.954);
+		padding: 22px;
+		border-width: 3px;
+		border-style: outset;
 }
 /* #wrapper {
 	position: inline;
 } */
 h2 {
-	font-size: 50px;
+	color: #f975f7;
+		filter: drop-shadow(2px 2px 20px #f008b7);
+		/* transform: rotate(-11deg); */
+		-webkit-text-stroke: 2px #f008b7;
 }
-
+#current-word {
+	font-size: 2em;
+	border: 2px solid #f805c3;
+	border-radius: 22px;
+	backdrop-filter: blur(5px);
+	border-block-color: #8e52f0;
+	letter-spacing:11px;
+	padding: 28px;
+}
+#current-word-section {
+		/* position: absolute; */
+			z-index: 20;
+			margin: 0;
+			font-family: "Mr Dafoe", cursive;
+			font-size: 1em;
+			color: #9218f5;
+			filter: drop-shadow(2px 2px 20px #f008b7);
+			-webkit-text-stroke: 2px #f008b7;
+}
 div {
+
 	display: inline;
 	text-align: center;
 }
 
 .band-image {
-	width: 250px;
-	height: 200px;
+	/* width: 250px;
+	height: 200px; */
 	border-radius: 25px;
-	border: 3px dotted #8e52f0;
+	border: 24px #8e52f0;
 }
 
 #band-div {
-	border: 3px dotted #f805c3;
+	/* border-block-color: #f805c3;
+	border:  24px #8e52f0; */
 	/* position: right; */
 	/* width: 300px; */
 	padding: 25px;
-	margin-left: 10px;
+filter: brightness(80%);
+	/* margin-left: 10px; */
 	display: inline-block;
 
-	/* box-shadow: inset 0 3px 0 0 #271b1b, 0 3px 0 0 #f5f5f5; */
+	/* box-shadow: inset 0 3px 0 0 #8e52f0, 0 3px 0 0 #f5f5f5; */
 }
 #game-section {
 	/* align-items: center; */
 	display: inline-block;
-	position: left;
+	/* position: left; */
 	/* width: 300px;
 	height: 750px; */
 	padding: 10px;
 	margin-bottom: 35px;
-	border: 3px dotted #8e52f0;
-	/* box-shadow: inset 0 -3px 0 0 #271b1b, 0 3px 0 0 #f5f5f5; */
+	/* border: 22px  #8e52f0; */
+	box-shadow: inset 0 -3px 0 0 #f805c3, 0 2px 0 0 #8e52f0;
 }
