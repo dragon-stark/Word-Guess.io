@@ -190,10 +190,8 @@ updateWins: function() {
 	  win = false;
 	}
   }
-
   // If win is true...
   if (win) {
-
 	// Increment wins.
 	this.wins = this.wins + 1;
 
