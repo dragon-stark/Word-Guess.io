@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Totally Awesome Word Guessing Game</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/80's Style.css" /> -->
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-	<title>Totally Awesome Word Guessing Game</title>
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="assets/css/80's Style.css" />
-</head>
-
-<body>
-	<div class="row">
-	  <div class="col-1"><div id="container">
-		<h1 class="chrome">Word Guess Game</h1><br>
-<!-- <div class="dreams"> Game!<br> </div><br> -->
-
-		<!-- <div class="side">
-		</div> -->
-
-		<div id="band-div">
-			<img src="assets/images/you-win.png" height="400px" width="300px" alt="80's game image" />
-		</div>
-		<div id="game-section" >
-	<h2>PLAY THIS GROOVY WORD GUESS GAME!</h2>
-			Press any key to begin guessing!</p>
-<!-- The div where our wins will be shown. -->
-			 <br><div>
-				<h4 class="section-title">Wins</h4>
-				<div id="wins"></div><br>
-			</div>
-<!-- The div where our current word (and guessing progress) will be shown. -->
-			<div id="current-word-section">
-				<h2 class="section-title"> Your word </h2>
-				<div id="current-word"></div>
-			</div><br>
-<!-- The div where our remaining guesses will be shown. -->
-			<div id="guesses-remaining-section"><br>
-				<p class="section-title"> Guesses Remaining</p>
-				<div id="guesses-remaining"></div>
-			</div></div><br>
-			<div id="guessed-letters-section">
-				<h3 class="section-title">Letters Guessed</h3>
-				<div id="guessed-letters"> </div>
-			</div>
-		</div>
-	</div>
-	</div></div>
-<!-- Linking to our JavaScript file. -->
-	<script src="assets/javascript/game.js" type="text/javascript"></script>
-</body>
+  <body>
+    <div class="row">
+      <div class="col-1">
+        <div id="container">
+          <!-- Game title -->
+          <h1 class="chrome">Word Guess Game</h1>
+          <br />
+          <!-- Band image -->
+          <div id="band-div">
+            <img
+              src="assets/images/you-win.png"
+              height="400px"
+              width="300px"
+              alt="80's game image"
+            />
+          </div>
+          <div id="game-section">
+            <!-- Game instructions -->
+            <h2>PLAY THIS GROOVY WORD GUESS GAME!</h2>
+            <p>Press any key to begin guessing!</p>
+            <br />
+            <!-- Wins display -->
+            <div>
+              <h4 class="section-title">Wins</h4>
+              <div id="wins"></div>
+              <br />
+            </div>
+            <!-- Current word display -->
+            <div id="current-word-section">
+              <h2 class="section-title">Your word</h2>
+              <div id="current-word"></div>
+            </div>
+            <br />
+            <!-- Guesses remaining display -->
+            <div id="guesses-remaining-section">
+              <br />
+              <p class="section-title">Guesses Remaining</p>
+              <div id="guesses-remaining"></div>
+            </div>
+          </div>
+          <br />
+          <!-- Guessed letters display -->
+          <div id="guessed-letters-section">
+            <h3 class="section-title">Letters Guessed</h3>
+            <div id="guessed-letters"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript file -->
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+  </body>
 </html>
